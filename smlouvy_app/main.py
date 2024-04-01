@@ -5,12 +5,14 @@ import datetime
 from docx import Document
 from docx.shared import Pt
 
+# Nastavení fontu vyplňovaného textu
 def set_font(paragraph):
     for run in paragraph.runs:
         run.font.name = 'Arial'
         run.font.size = Pt(11)
         run.bold = False  # Nastaví písmo na netučné
 
+# Funkce pro vyplnění smluv
 def fill_contracts():
     name = name_entry.get()
     date_of_birth = date_entry.get()
