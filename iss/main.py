@@ -26,7 +26,7 @@ window.title("Aktuální údaje o ISS")
 window.config(bg=bg_color)
 window.resizable(False, False)
 
-# Labels
+# Popisky
 Label(text="Zeměpisná délka:", bg=bg_color, fg=fg_color, font=main_font).grid(row=0, column=0, sticky=W, padx=10, pady=2)
 Label(text="Zeměpisná šířka:", bg=bg_color, fg=fg_color, font=main_font).grid(row=1, column=0, sticky=W, padx=10, pady=2)
 Label(text="Počet lidí ve Vesmíru: ", bg=bg_color, fg=fg_color, font=main_font).grid(row=2, column=0, padx=10, pady=2)
