@@ -20,7 +20,6 @@ def create_acc():
     else:
         data = []
 
-    # Přidání nového uživatele k existujícím datům
     data.append(new_user)
 
     # Zápis dat zpět do souboru
@@ -28,11 +27,11 @@ def create_acc():
         json.dump(data, file, ensure_ascii=False, indent=4)
     
     print("Váš účet byl úspěšně vytvořen.")
-    
-    # Po vytvoření účtu spustit metody pro provádění operací
+
     metody(bankMethods(new_user_name))
 
 def login():
+    # Přihlášení uživatele
     user_name = input("Zadejte uživatelské jméno: ")
     with open("users.json", "r", encoding="utf-8") as file:
         user_data = json.load(file)
