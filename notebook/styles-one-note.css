@@ -1,0 +1,86 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, main {
+    width: 960px;
+    margin: 20px auto;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    font-family: Arial, sans-serif;
+    resize: none;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.one_task {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.one_task h2 {
+    margin-bottom: 5px;
+}
+
+.one_task p {
+    margin-bottom: 0;
+}
+
+a,
+.btn-save,
+.btn-delete {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5f5f5f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover,
+.btn-save:hover,
+.btn-delete:hover {
+    background-color: #777;
+}
+
+.note-check {
+    text-align: center;
+}
