@@ -2,7 +2,7 @@
 
 Welcome to my GitHub repository! Below you'll find a list of my projects.
 
-## Projects
+## Python Projects
 
 ### Project 1: [Bank Account](https://github.com/lukashejna01/projects/tree/master/bank_app)
 - This project implements a basic banking system with features such as account creation, login, deposit, withdrawal, and balance inquiry, using Python classes and JSON file storage.
