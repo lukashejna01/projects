@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Detail pojištění
+{% endblock title %}
+
+{% block content %}
+    <div class="text-center">
+        <p>{{ insurance.type }}</p>
+        <p>{{ insurance.amount }}</p>
+        <p>{{ insurance.item }}</p>
+        <p>{{ insurance.validity_from }}</p>
+        <p>{{ insurance.validity_to }}</p>
+        <a href="{% url 'profile' user_id=user.id %}" class="btn btn-light">Zpět na profil</a>
+    </div>
+{% endblock content %}

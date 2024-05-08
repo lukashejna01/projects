@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Typy pojištění
+{% endblock title %}
+
+{% block content %}
+    <h1 class="text-center">Typy pojištění</h1>
+    <div class="container mt-5">
+        <ul class="list-group list-group-flush">
+            {% for type in types %}
+                <li class="list-group-item">{{ type }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

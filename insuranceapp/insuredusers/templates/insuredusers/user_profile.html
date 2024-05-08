@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Profil
+{% endblock title %}
+
+{% block content %}
+    <h1 class="text-center">{{ insured_user.first_name }} {{ insured_user.last_name }}</h1>
+    <div class="container mt-5">
+        <div class="row mb-3 text-center">
+            <div class="col-6">{{ address.street }} {{ address.house_number }}/{{ address.apartment_number }}</div>
+            <div class="col-6">{{ insured_user.email }}</div>
+            <div class="col-6">{{ address.city }}</div>
+            <div class="col-6">{{ insured_user.phone_number }}</div>
+        </div>
+        <h2 class="text-center mt-5">Sjednaná pojištění</h2>
+        {% if insurances %}
+            <table class="table table-bordered border-dark mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col" class="align-middle">Typ</th>
+                        <th scope="col" class="align-middle">Položka</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for insurance in insurances %}
+                        <tr>
+                            <td class="align-middle">{{ insurance.type }}</td>
+                            <td class="align-middle"><a href="{% url 'insurance-detail' insurance_id=insurance.id %}">{{ insurance.item }}</a></td>
+                            <td class="align-middle">
+                                <a href="{% url 'update-insurance' insurance_id=insurance.id %}" class="btn btn-warning">Editovat</a>
+                                <a href="{% url 'delete-insurance' insurance_id=insurance.id %}" class="btn btn-danger">Odstranit</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        <div class="d-flex justify-content-around mt-3">
+            <a href="{% url 'new-insurance' %}" class="btn btn-primary">Přidat pojištění</a>
+            <a href="{% url 'update-profile' user_id=user.id %}" class="btn btn-warning">Editovat pojištěnce</a>
+            <a href="{% url 'delete-profile' user_id=user.id %}" class="btn btn-danger">Odstranit pojištěnce</a>
+        </div>
+    </div>
+{% endblock %}

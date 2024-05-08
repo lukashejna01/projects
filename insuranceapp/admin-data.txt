@@ -1,0 +1,4 @@
+login data for admin panel
+
+username: insuranceapp
+password: insuranceapp

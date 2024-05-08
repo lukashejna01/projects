@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Odstranit profil
+{% endblock title %}
+
+{% block content %}
+    <h2 class="text-center">Jste si jistí, že chcete smazat svůj účet?</h2>
+    <form method="post" class="mt-5">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row justify-content-center">
+                <button type="submit" name="delete" value="yes" class="btn btn-danger mb-3">Ano</button>
+                <button type="submit" name="delete" value="no" class="btn btn-primary">Ne</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

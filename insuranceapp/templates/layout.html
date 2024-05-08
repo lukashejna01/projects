@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>
+        {% block title %}
+            Django App
+        {% endblock title %}
+    </title>
+</head>
+<body class="dark-mode">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand" href="#">PojištěníApp</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-link" href="{% url 'index' %}">Pojištěnci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-link" href="{% url 'all-types' %}">Pojištění</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-link" href="{% url 'about-app' %}">O aplikaci</a>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            {% if user.is_superuser %}
+                            <span class="nav-link btn btn-link">Admin</span>
+                            {% else %}
+                            <a class="nav-link btn btn-link" href="{% url 'profile' user_id=user.id %}">{{ user.first_name }}</a>
+                            {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="nav-link btn btn-link">Odhlásit</button>
+                            </form>
+                        </li>
+                    </ul>
+                    {% else %}
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-link" href="{% url 'login' %}">Přihlásit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-link" href="{% url 'register' %}">Registrovat</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <main class="mt-5">
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
