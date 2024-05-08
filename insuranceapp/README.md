@@ -8,11 +8,9 @@ Insured User Profiles: Maintain profiles for insured users. Each profile include
 Address Management: Manage addresses associated with insured user profiles. Includes fields for street, house number, apartment number (optional), city, and postal code.
 
 ### Technologies Used:
-Backend
 - Python
 - Django
 - SQLite
-Frontend
 - HTML/CSS
 - Bootstrap
 
