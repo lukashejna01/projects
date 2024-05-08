@@ -1,11 +1,10 @@
 ## InsuranceApp
-InsuranceApp is a web application developed using Django, a high-level Python web framework, designed to manage insurance policies and insured users. The application allows insurance administrators to perform CRUD (Create, Read, Update, Delete) operations on insurance policies and user profiles.
+InsuranceApp is a web application, developed by Python web framework Django, to manage insurance policies and insured users. The application allows insurance administrators to perform CRUD (Create, Read, Update, Delete) operations on insurance policies and user profiles.
 
 ### Key Features:
-User Management: Secure user authentication and authorization system.
-Insurance Policy Management: Create, update, and delete insurance policies. Each policy includes details such as type, amount, item, and validity period.
-Insured User Profiles: Maintain profiles for insured users. Each profile includes personal information such as name, email, phone number, and address.
-Address Management: Manage addresses associated with insured user profiles. Includes fields for street, house number, apartment number (optional), city, and postal code.
+- User Management: Secure user authentication and authorization system.
+- Insured User Profile Management: Create, read, update and delete. Each profile includes personal information such as name, email, phone number, address and list of all insurances belonging to the user.
+- Insurance Policy Management: Create, read, update and delete insurance policies. Each policy includes details such as type, amount, item, and validity period.
 
 ### Technologies Used:
 - Python
