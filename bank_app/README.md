@@ -1,6 +1,6 @@
-# Bank System
+# Bank App
 
-Bank System is a console-based application written in Python that allows users to manage their bank accounts. Users can register, log in, view their balance, deposit money, withdraw money, and transfer money to other users. The data is stored in a JSON file.
+Bank App is a console-based application written in Python that allows users to manage their bank accounts. Users can register, log in, view their balance, deposit money, withdraw money, and transfer money to other users. The data is stored in a JSON file.
 
 ## Key Features
 
