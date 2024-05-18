@@ -15,11 +15,6 @@ ContractFillerApp is a desktop application built using Python and Tkinter, desig
 - os (for file and directory operations)
 - datetime (for handling date information)
 
-### Project Structure:
-- `main.py`: The main script that initializes the application and handles the workflow.
-- `user_input_frame.py`: Contains the `UserInputFrame` class responsible for creating and managing user input fields.
-- `contract_manager.py`: Contains the `ContractManager` class responsible for filling and saving the contract documents.
-
 ### Getting Started:
 To get started with ContractFillerApp, follow these steps:
 1. Clone the repository to your local machine.
