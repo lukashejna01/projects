@@ -8,7 +8,7 @@ ContractFillerApp is a desktop application built using Python and Tkinter, desig
 
 ### Technologies Used:
 - Python
-- Tkinter (for the graphical user interface)
+- Tkinter (for the GUI)
 - python-docx (for handling Word documents)
 - os (for file and directory operations)
 - datetime (for handling date information)
