@@ -5,8 +5,6 @@ ContractFillerApp is a desktop application built using Python and Tkinter, desig
 - **User Input Management:** Collects user data through a graphical interface with various input fields.
 - **Contract Selection:** Users can select which contracts to fill from the available options.
 - **Automated Document Filling:** Automatically fills the selected contract templates with the user’s data.
-- **Personalized Output:** Saves the filled contracts in a user-specific folder, named after the user, for easy access and organization.
-- **Notification:** Informs the user once the contracts are successfully filled and saved.
 
 ### Technologies Used:
 - Python
